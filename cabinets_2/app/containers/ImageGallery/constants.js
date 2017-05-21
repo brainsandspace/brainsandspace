@@ -1,0 +1,1 @@
+export const HIGHLIGHT_IMAGE = 'app/ImageGallery/HIGHLIGHT_IMAGE';
