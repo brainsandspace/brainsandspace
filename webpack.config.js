@@ -16,6 +16,16 @@ module.exports = {
         test: /\.scss$/,
         loaders: ['style-loader', 'css-loader', 'sass-loader'],
       },
+      {
+        test: /\.(jpe?g|png|gif)$/,
+        loaders: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+      
+          },
+        ],
+      },
     ],
   },
 
@@ -25,10 +35,16 @@ module.exports = {
 
   // hacky way to view on remote computer (dev machine local IP is 192.168.0.15)
   devServer: {
-    // public: '192.168.0.15:3000',
+    public: '192.168.0.15:8080',
   },
 
   resolve: {
     modules: ['src', 'node_modules'],
+    extensions: ['.js', '.jsx', '.react.js'],
+    // mainFields: [
+    //   'browser',
+    //   'jsnext:main',
+    //   'main',
+    // ],
   },
 };

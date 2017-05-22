@@ -8,4 +8,52 @@ html {
 
 html, body {
   height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+}
+
+.stars {
+  background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/AUIClients/AmazonUIBaseCSS-sprite_1x-28bd59af93d9b1c745bb0aca4de58763b54df7cf._V2_.png);
+  -webkit-background-size: 400px 670px;
+  background-size: 400px 670px;
+  width: 80px;
+  height: 18px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: text-top;
+}
+
+#nav-arrow {
+  background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/gno/sprites/global-sprite_bluebeacon-32-v1._CB295592523_.png);
+  background-position: 0 1000px;
+  background-position-x: 0px;
+  background-position-y: 1000px;
+  background-repeat: repeat-x;
+  display: inline-block;
+  border-style: solid;
+  border-width: 4px;
+  border-color: transparent;
+  border-top: 4px solid #606060;
+  border-bottom-width: 0;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  margin: 0 0 2px 5px;
+  border-top-color: #a7acb2;
 }
