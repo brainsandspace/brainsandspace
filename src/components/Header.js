@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import NavDropdown from 'components/NavDropdown';
-import NavButton from 'components/NavButton';
-import colors from 'constants/colors';
-import { DEPARTMENTS } from 'constants/index.js';
+import colors from 'constants/colors.js';
+import MainNav from 'components/MainNav';
+import NavBelt from 'components/NavBelt';
 
 const Wrapper = styled.header`
 background: ${colors.darkblue}
@@ -61,51 +60,10 @@ nav#sub-nav {
 }
 `;
 
-const NavTools = () => (
-  <div id="nav-tools">
-    <span>language</span> <span>account & lists</span> <span>orders</span>
-  </div>
-);
-
-const MainNav = () => (
-  <nav id="main-nav">
-    <NavDropdown label="Departments">
-      {DEPARTMENTS.map(dep => {
-        return (
-          <li className="orange-hover bold-hover" key={dep.name}>{dep.name}</li>
-        );
-      })}
-    </NavDropdown>
-    <NavButton label="Orders" />
-    <NavTools />
-  </nav>
-);
-
-const SubNav = () => (
-  <nav id="sub-nav">
-    <ul>
-      <li className="selected"><a href="#">Home & Kitchen</a></li>
-      <li><a href="#">Best Sellers</a></li>
-      <li><a href="#">Shop by Room</a></li>
-      <li><a href="#">Bedding & Bath</a></li>
-      <li><a href="#">Home Décor</a></li>
-      <li><a href="#">Artwork</a></li>
-      <li><a href="#">Storage</a></li>
-      <li><a href="#">Vacuums & Floor Care</a></li>
-      <li><a href="#">Heating & Cooling</a></li>
-      <li><a href="#">Furniture</a></li>
-      <li><a href="#">Kitchen & Dining</a></li>
-      <li><a href="#">Patio & Garden</a></li>
-      <li><a href="#">Appliances</a></li>
-      <li><a href="#">Wedding Registry</a></li>
-    </ul>
-  </nav>
-);
-
 const Header = () => (
   <Wrapper>
+    <NavBelt />
     <MainNav />
-    <SubNav />
   </Wrapper>
 );
 
